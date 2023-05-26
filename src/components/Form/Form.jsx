@@ -9,8 +9,8 @@ export const Form = ({ handleAddContact }) => {
    
 
     const handleInputChange = (e) => {
-        console.log(e.currentTarget.value);
-        console.log(e.currentTarget.name);
+        //console.log(e.currentTarget.value);
+        //console.log(e.currentTarget.name);
         
         switch (e.currentTarget.name) {
             case 'name':
