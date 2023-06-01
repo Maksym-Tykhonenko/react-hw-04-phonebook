@@ -9,15 +9,13 @@ export const Form = ({ handleAddContact }) => {
    
 
     const handleInputChange = (e) => {
-        //console.log(e.currentTarget.value);
-        //console.log(e.currentTarget.name);
         
         switch (e.currentTarget.name) {
             case 'name':
-                setName(e.currentTarget.value);
+                setName(e.currentTarget.value.trim());
                 break;
             case 'number':
-                setNumber(e.currentTarget.value);
+                setNumber(e.currentTarget.value.trim());
                 break;
 
             default:
@@ -43,7 +41,6 @@ export const Form = ({ handleAddContact }) => {
         
     };
 
-//
         return (
             <>
                 <form onSubmit={handleFormSubmit}>
@@ -53,7 +50,6 @@ export const Form = ({ handleAddContact }) => {
                             value={name}
                             type="text"
                             name="name"
-                            
                             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                             required
                         /></label>
@@ -63,7 +59,6 @@ export const Form = ({ handleAddContact }) => {
                             type="tel"
                             value={number}
                             name="number"
-                            
                             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                             required
                         /></label>
@@ -74,4 +69,3 @@ export const Form = ({ handleAddContact }) => {
         );
 
 };
-//  
